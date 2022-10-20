@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style_dark.css" id="theme" />
+  </head>
+  <body>
+    <div class="calculator_container">
+      <div class="calculator">
+        <div class="calculator_screen">
+          <input
+            type="text"
+            class="screen_calculation"
+            name="result"
+            id="result"
+            placeholder="Result"
+            readonly
+          />
+        </div>
+        <div class="calculator_buttons">
+          <table>
+            <tr>
+              <td class="button symbol">
+                <button
+                  type="button"
+                  class="theme_button"
+                  onclick="changeTheme()"
+                ></button>
+              </td>
+              <td class="button symbol">
+                <input type="button" value="ac" onclick="result.value=''" />
+              </td>
+              <td class="button symbol">
+                <input type="button" value="%" onclick="liveScreen('%')" />
+              </td>
+              <td class="button symbol">
+                <input type="button" value="/" onclick="liveScreen('/')" />
+              </td>
+            </tr>
+            <tr>
+              <td class="button">
+                <input type="button" value="7" onclick="liveScreen(7)" />
+              </td>
+              <td class="button">
+                <input type="button" value="8" onclick="liveScreen(8)" />
+              </td>
+              <td class="button">
+                <input type="button" value="9" onclick="liveScreen(9)" />
+              </td>
+              <td class="button symbol">
+                <input type="button" value="*" onclick="liveScreen('*')" />
+              </td>
+            </tr>
+            <tr>
+              <td class="button">
+                <input type="button" value="4" onclick="liveScreen(4)" />
+              </td>
+              <td class="button">
+                <input type="button" value="5" onclick="liveScreen(5)" />
+              </td>
+              <td class="button">
+                <input type="button" value="6" onclick="liveScreen(6)" />
+              </td>
+              <td class="button symbol">
+                <input type="button" value="-" onclick="liveScreen('-')" />
+              </td>
+            </tr>
+            <tr>
+              <td class="button">
+                <input type="button" value="1" onclick="liveScreen(1)" />
+              </td>
+              <td class="button">
+                <input type="button" value="2" onclick="liveScreen(2)" />
+              </td>
+              <td class="button">
+                <input type="button" value="3" onclick="liveScreen(3)" />
+              </td>
+              <td class="button symbol">
+                <input type="button" value="+" onclick="liveScreen('+')" />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="button">
+                <input
+                  type="button"
+                  value="0"
+                  onclick="liveScreen(0)"
+                  style="height: 50px; width: 137px"
+                />
+              </td>
+              <td class="button">
+                <input type="button" value="." onclick="liveScreen('.')" />
+              </td>
+              <td class="button symbol">
+                <input
+                  type="button"
+                  value="="
+                  onclick="calculate(result.value)"
+                />
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

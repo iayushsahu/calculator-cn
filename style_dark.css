@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all ease-in-out 0.3s;
+}
+
+body {
+  background-color: #000;
+}
+.calculator_container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.calculator {
+  height: 50.5vh;
+  width: 286px;
+  min-width: 286px;
+  margin-top: 15vh;
+  background-color: #1b1e20;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px 0.5px rgba(255, 255, 255, 0.533);
+}
+.calculator_screen {
+  height: 14vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2px;
+}
+
+.screen_calculation {
+  background-color: transparent;
+  border: none;
+  padding: 20px 0 20px 20px;
+  width: 100%;
+  text-align: right;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.777);
+}
+
+.screen_calculation:focus {
+  outline: none;
+}
+
+.screen_calculation::placeholder {
+  color: rgba(255, 255, 255, 0.777);
+  transition: all ease-in-out 0.3s;
+}
+
+.calculator_buttons {
+  width: 100%;
+}
+
+td {
+  background: #2a3033;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+
+td > input {
+  height: 50px;
+  width: 68px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.777);
+}
+
+td > button {
+  height: 50px;
+  width: 68px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.777);
+  position: relative;
+}
+
+td > button::before {
+  position: absolute;
+  content: "🌙";
+  top: 15%;
+  right: 28%;
+  transition: all ease-in-out 0.3s;
+}
+
+td:hover {
+  background: #191b1b;
+}
+
+td:active {
+  box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.6) inset;
+}
+
+td:focus {
+  outline: none;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  text-align: center;
+}
+
+.symbol {
+  background-color: #45140f;
+}
+
+.symbol:hover {
+  background-color: #320a06;
+}
